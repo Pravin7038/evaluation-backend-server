@@ -16,7 +16,7 @@ app.use("/users",userRoute);
 
 app.use("/posts",postRoute)
 
-app.use(cors({ origin: 'hhttps://frontend-pravin7038.vercel.app' }));
+app.use(cors({ origin: 'https://frontend-pravin7038.vercel.app' }));
 
 const connection = async () => {
 
