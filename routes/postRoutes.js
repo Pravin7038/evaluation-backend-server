@@ -10,9 +10,9 @@ route.get("/", async(req, res) => {
 
 
         
-        if (req.query.title) {
+        if (req.query.device) {
             
-            const post = await Post.findOne({ title: req.query.title });
+            const post = await Post.findOne({ device: req.query.device });
    
 
             res.send({ "msg": post })
@@ -89,9 +89,9 @@ route.patch("/update/:id", auth, async (req, res) => {
 
         if (post.creator.toString() === req.userid) {
 
-            await Post.findByIdAndUpdate({ _id: req.params.id }, req.body,{new:true})
-
-            res.send("updated");
+          const updatedposts =  await Post.findByIdAndUpdate({ _id: req.params.id }, req.body,{new:true})
+        
+            res.send(updatedposts);
 
         }
         else {

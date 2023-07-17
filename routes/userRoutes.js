@@ -10,7 +10,7 @@ route.post("/register",async(req,res)=>{
         const newpass = await bcrypt.hash(password,10)
       const user =  await User.create({...req.body,password:newpass});
     
-      res.send({'mesg':user})
+      res.send({'mesg':"registered successfully"})
 
     } catch (error) {
         
