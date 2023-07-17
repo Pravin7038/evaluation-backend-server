@@ -11,12 +11,12 @@ app.get("/",(req,res)=>{
 
     res.send("welcome to the server")
 })
-// sdsdgvsdgvfsdfgvggfv
+
 app.use("/users",userRoute);
 
 app.use("/posts",postRoute)
 
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'hhttps://frontend-pravin7038.vercel.app' }));
 
 const connection = async () => {
 
