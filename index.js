@@ -11,7 +11,7 @@ app.get("/",(req,res)=>{
 
     res.send("welcome to the server")
 })
-
+// sdsdgvsdgvfsdfgvggfv
 app.use("/users",userRoute);
 
 app.use("/posts",postRoute)
